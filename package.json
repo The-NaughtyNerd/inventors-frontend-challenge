@@ -1,0 +1,14 @@
+{
+  "name": "spoilerking",
+  "version": "1.0.0",
+  "description": "landing page for a movie app",
+  "main": "index.js",
+  "scripts": {
+    "compile": "sass sass/main.scss css/styles.css -w"
+  },
+  "author": "the-naughtynerd",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.62.1"
+  }
+}

@@ -1,0 +1,17 @@
+@use "abstracts" as c;
+
+body {
+  // background-color: c.$color-dark;
+  background-image: linear-gradient(
+    to top,
+    rgba(c.$color-dark, 0.7),
+    rgba(c.$color-dark, 1)
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+header {
+  padding: 3rem;
+}
