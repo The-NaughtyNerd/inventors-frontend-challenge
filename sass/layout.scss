@@ -10,8 +10,18 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
+  padding: 0 5rem;
+
+  @include c.respond(tab-land) {
+    padding: 0 2.5rem;
+  }
 }
 
 header {
-  padding: 3rem;
+  padding: 2rem 0 2rem 0;
+  // position: fixed;
+}
+
+.hero {
+  display: flex;
 }

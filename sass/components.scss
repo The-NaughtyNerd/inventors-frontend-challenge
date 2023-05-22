@@ -2,18 +2,47 @@
 
 .nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 
   &__logo {
     height: 3.3rem;
     width: 15rem;
+
+    @include c.respond(tab-land) {
+      height: 2.9rem;
+      width: 13rem;
+    }
   }
 
   &__bar {
     display: flex;
     justify-content: center;
-    // align-items: center;
+    align-items: center;
+
+    @include c.respond(tab-port) {
+      // height: 100vh;
+      // position: fixed;
+      // top: 0px;
+      // right: 0px;
+      // left: 0px;
+      // z-index: 10;
+      flex-direction: column;
+      // background: rgb(0, 0, 0);
+      transition: top 1s ease 0s;
+      // justify-content: space-around;
+      align-items: start;
+      // display: none;
+    }
+
+    .menu-bg {
+      display: flex;
+      align-items: center;
+
+      @include c.respond(tab-port) {
+        display: none;
+      }
+    }
   }
 
   &__item {
@@ -21,6 +50,11 @@
     padding: 0.5rem 6rem;
     font-size: 1.6rem;
     font-weight: 700;
+
+    @include c.respond(tab-land) {
+      font-size: 1.3rem;
+      padding: 0.5rem 5rem;
+    }
 
     a {
       &:link,
@@ -40,13 +74,65 @@
   &__search {
     display: flex;
     // flex: 0 0 40%;
-    // align-items: center;
+    align-items: center;
     justify-content: center;
+
+    @include c.respond(tab-port) {
+      // align-items: flex-end;
+    }
+  }
+}
+
+@include c.respond(tab-port) {
+}
+
+.nav__bar-sm {
+  display: none;
+
+  .menu-sm {
+    width: 40vw;
+    height: 100vh;
+    background: c.$color-orange;
+    padding-top: 1rem;
+    // background-image: linear-gradient(
+    //   to top,
+    //   (c.$color-grey, 0.7),
+    //   (c.$color-orange, 1)
+    // );
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    display: block;
+    // padding: 0;
+    // float: left;
+    z-index: 100;
+    position: fixed;
+
+    .nav__logo {
+      height: 3.74rem;
+      width: 17rem;
+      margin-bottom: 3rem;
+      padding-left: 1rem;
+    }
+
+    .nav__item {
+      text-align: left;
+      padding-left: 1rem;
+
+      a {
+        font-size: 2rem;
+      }
+    }
+
+    // &::after {
+    //   content: "";
+    //   display: table;
+    //   clear: both;
+    // }
   }
 }
 
 .search {
-  padding: 0.7rem 2rem;
+  padding: 0.5rem 2rem;
   background-color: c.$color-grey;
   opacity: 0.3;
   border-radius: 10rem;
@@ -56,9 +142,24 @@
   margin-right: 2rem;
   width: 20rem;
 
+  @include c.respond(tab-land) {
+    padding: 0.7rem 1.5rem;
+    margin-right: 1.5rem;
+    width: 15rem;
+  }
+
+  @include c.respond(tab-port) {
+    width: 1rem;
+    visibility: hidden;
+  }
+
   &__icon {
     fill: c.$color-light;
     padding-right: 2rem;
+
+    @include c.respond(tab-port) {
+      visibility: visible;
+    }
   }
 
   &__input {
@@ -72,4 +173,27 @@
       outline: none;
     }
   }
+}
+
+.hamburger-open,
+.hamburger-close {
+  // visibility: hidden;
+
+  width: 3rem;
+  height: 3rem;
+  display: none;
+  cursor: pointer;
+}
+
+@include c.respond(tab-port) {
+  .hamburger-open {
+    display: block;
+  }
+}
+
+.pic {
+  background-image: url(../Assets/scream.png);
+  // z-index: 10;
+  background-size: cover;
+  background-position: center;
 }

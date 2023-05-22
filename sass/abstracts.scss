@@ -1,11 +1,43 @@
-// VARIABLES & MIXINS
+// VARIABLES
 // COLORS
 $color-green: #00b598;
 $color-yellow: #ffa900;
-$color-orange: #ff862b;
+$color-orange: #ff872ba4;
 
 $color-red: #ff0018;
 $color-dark: #0c1516;
 $color-light: #ffffff;
 
 $color-grey: #999;
+
+// MIXINS
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      //600px
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      //900px
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      //1200px
+      @content;
+    }
+  }
+
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      //1800px
+      @content;
+    }
+  }
+}

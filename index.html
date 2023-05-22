@@ -14,13 +14,28 @@
   <body>
     <header>
       <nav class="nav">
-        <img src="Assets/logo.png" alt="Logo" class="nav__logo" />
-
         <ul class="nav__bar">
-          <li class="nav__item"><a href="">Home</a></li>
-          <li class="nav__item"><a href="">Discover</a></li>
-          <li class="nav__item"><a href="">Watchlist</a></li>
-          <li class="nav__item"><a href="">Live TV</a></li>
+          <div class="hamburgers">
+            <img
+              src="Assets/icons/Hamburger menu.svg"
+              alt=""
+              class="hamburger-open"
+            />
+            <img
+              src="Assets/icons/times-svgrepo-com.svg"
+              alt=""
+              class="hamburger-close"
+            />
+          </div>
+
+          <div class="menu-bg">
+            <img src="Assets/logo.png" alt="Logo" class="nav__logo" />
+
+            <li class="nav__item"><a href="">Home</a></li>
+            <li class="nav__item"><a href="">Discover</a></li>
+            <li class="nav__item"><a href="">Watchlist</a></li>
+            <li class="nav__item"><a href="">Live TV</a></li>
+          </div>
         </ul>
 
         <div class="nav__search">
@@ -40,6 +55,40 @@
           <img src="Assets/profile.png" alt="Profile picture" class="profile" />
         </div>
       </nav>
+      <ul class="nav__bar-sm">
+        <div class="menu-sm">
+          <img src="Assets/logo.png" alt="Logo" class="nav__logo" />
+
+          <li class="nav__item"><a href="">Home</a></li>
+          <li class="nav__item"><a href="">Discover</a></li>
+          <li class="nav__item"><a href="">Watchlist</a></li>
+          <li class="nav__item"><a href="">Live TV</a></li>
+        </div>
+      </ul>
     </header>
+    <main>
+      <!-- 
+        <section class="hero">
+        <div class="highlight">
+          <img
+            src="Assets/highlight-title.png"
+            alt=""
+            class="highlight__name"
+          />
+          <div class="highlight__desc">
+            <span>2023</span>
+            <span>2h 2m</span>
+            <span>17+</span>
+            <span>CC</span>
+            <span>4k</span>
+          </div>
+          <div class="highlight__play"></div>
+        </div>
+        <div class="pic">
+          <img src="Assets/scream.png" alt="" /> 
+        </div>
+      </section> 
+    --></main>
   </body>
+  <script src="script.js"></script>
 </html>
