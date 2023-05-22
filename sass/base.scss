@@ -5,7 +5,7 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 html {
@@ -14,8 +14,6 @@ html {
 }
 
 body {
-  box-sizing: border-box;
-  // background-color: v.$light-3;
   line-height: inherit;
   font-family: "Satoshi", sans-serif;
 }
