@@ -28,6 +28,7 @@
   justify-content: space-between;
   align-items: center;
   width: 95%;
+  position: fixed;
 
   &__item-bg {
     font-size: 1.5rem;
@@ -129,18 +130,18 @@
   .menu-sm {
     width: 60vw;
     height: 100vh;
-    // background: c.$color-orange;
     padding-top: 1rem;
     background: linear-gradient(
       to top,
-      (c.$color-grey, 0.7),
-      (c.$color-orange, 1)
+      rgba(c.$color-grey, 0.8),
+      rgba(c.$color-dark, 1)
     );
     // background-size: cover;
     // background-repeat: no-repeat;
     display: block;
     z-index: 100;
     position: fixed;
+    margin-top: 5rem;
 
     .nav__logo-sm {
       height: 3.74rem;
@@ -159,8 +160,7 @@
   }
 }
 
-/**
- * .highlight {
+.highlight {
   &__name {
     height: 11rem;
     width: 52rem;
@@ -170,7 +170,9 @@
 .pic {
   background-image: url(../Assets/scream.png);
   background-size: cover;
-  background-position: right;
+  background-position: center;
   width: 50%;
+  height: 100%;
 }
- */
+/**
+ * */

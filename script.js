@@ -46,13 +46,6 @@ hamburgerClose.addEventListener("click", () => {
 // ));
 
 /** Fetch data from Server */
-const apiKey = "5dc3bb994fb076d56fd9dd8942e2f25a";
-
-// const fetchData = function (url, callback, optionalParam) {
-//   fetch(url)
-//     .then((response) => response.json())
-//     .then((data) => callback(data, optionalParam));
-// };
 
 let movieList;
 
